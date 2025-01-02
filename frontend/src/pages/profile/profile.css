@@ -1,0 +1,147 @@
+/* General styles */
+body {
+  background-color: #f0f2f5; /* Light background for the whole page */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  min-height: 100vh; /* Allow scrolling */
+  display: block; /* Prevent centering everything */
+}
+
+.profile-container {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto; /* Center the profile container */
+  text-align: center;
+}
+
+.profile-image img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid #18cc24;
+}
+
+.profile-info h1 {
+  font-size: 24px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.profile-info p {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #555;
+}
+
+.edit-button {
+  background-color: #18cc24;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+  background-color: #0f7015;
+}
+
+.user-posts {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.user-posts h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+/* Post layout */
+.post {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  text-align: center;
+}
+
+.post h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.post p {
+  margin: 0 0 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Fixed image size for posts */
+.post img {
+  width: 200px; /* Fixed width */
+  height: 200px; /* Fixed height */
+  object-fit: cover; /* Maintain aspect ratio, crop if needed */
+  border-radius: 8px;
+  margin: 0 auto 10px; /* Center the image and add space below */
+  display: block;
+}
+
+/* Supprimer button under the image */
+.post button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  margin: 10px auto 0; /* Space between image and button */
+  display: inline-block;
+}
+
+.post button:hover {
+  background-color: #e60000;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .profile-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .profile-info h1 {
+    font-size: 20px;
+  }
+
+  .profile-info p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .post {
+    padding: 10px;
+  }
+
+  .post h3 {
+    font-size: 16px;
+  }
+
+  .edit-button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+}
